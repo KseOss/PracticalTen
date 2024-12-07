@@ -1,0 +1,32 @@
+﻿<Window x:Class="PracticalTen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticalTen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="287" Width="450">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <!--Меню "Справка"-->
+        <Menu VerticalAlignment="Top" Grid.ColumnSpan="5">
+            <MenuItem Header="Справка" FontSize="14">
+                <MenuItem Header="О программе" Click="About_Click" FontSize="14"/>
+                <MenuItem Header="Выход" Click="Exit_Click" FontSize="14"/>
+            </MenuItem>
+        </Menu>
+        <!--Кнопка для подсчета значений в массиве-->
+        <Button Name="btnCount" Content="Посчитать" Width="100" Height="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Click="btnCount_Click" Margin="0,46,0,0"/>
+        <!--Текстовый блок для отображения результатов подсчета-->
+        <TextBlock Name="resultTB" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="16" Margin="25,0,28,0"/>
+    </Grid>
+</Window>
